@@ -1,4 +1,5 @@
 // Solution doesn't perofrm well on Time and Memory benchmarks, but it works for all the test cases
+// Scores average time for Time usage and above average for Memory usage
 
 /**
  * @param {Array} arr
