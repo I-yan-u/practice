@@ -1,4 +1,5 @@
 # Tribonacci number
+---
 
 <div class="elfjS" data-track-load="description_content"><p>The Tribonacci sequence T<sub>n</sub> is defined as follows:&nbsp;</p>
 
