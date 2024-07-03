@@ -10,7 +10,7 @@ async def check_domain(domain):
     with ThreadPoolExecutor() as pool:
         try:
             w = await loop.run_in_executor(pool, whois.whois, domain)
-            return bool(w.creation_date)
+            return bool(w.domain_name)
         except Exception as e:
             return False
 
@@ -18,8 +18,8 @@ async def is_live(domain):
     url = f"http://{domain}"
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(url, allow_redirects=True, timeout=5) as response:
-                return response.status == 200
+            async with session.get(url, timeout=20) as response:
+                return 200 >= response.status <= 399
     except asyncio.TimeoutError:
         print(f"Timeout occurred for {domain}")
         return False
