@@ -29,3 +29,9 @@ Thumbs.db
 *.pyc
 __pycache__/
 test*
+
+# Ignore rust files
+/target/
+target*
+*.exe
+```
