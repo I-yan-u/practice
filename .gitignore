@@ -35,3 +35,9 @@ test*
 target*
 *.exe
 ```
+
+# Ignore cargo generated files
+Cargo.lock
+/target/
+Cargo*
+rust/*
