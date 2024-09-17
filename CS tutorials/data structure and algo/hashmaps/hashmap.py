@@ -32,8 +32,13 @@ class Hashmap:
             if elements[0] == key:
                 del elements
 
-    # def __str__(self):
-    #     return f'{x: y for x}'
+    def __str__(self):
+        ret = '{'
+        for layer in self.arr:
+            for tup in layer:
+                ret += f'{tup[0]}: {tup[1]}, '
+        ret += '}'
+        return ret
             
 
 if __name__ == '__main__':
@@ -44,4 +49,4 @@ if __name__ == '__main__':
     t['march 6'] = 2
     t['march 4'] = 569
     t['march 17'] = 55
-    print(t['march 17'])
+    print(t)
