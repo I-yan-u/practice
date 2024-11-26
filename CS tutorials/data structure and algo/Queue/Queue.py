@@ -15,6 +15,10 @@ class Queue:
         """Removes the first object added to queue"""
         return self._buffer.pop()
     
+    def get(self) -> any:
+        """Display next in queue"""
+        return self._buffer[-1]
+    
     def size(self) -> int:
         return len(self._buffer)
     
